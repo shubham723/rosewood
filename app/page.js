@@ -5,6 +5,7 @@ import { ToastContainer } from 'react-toastify';
 import BestPlace from './components/bestPlace';
 import Footer from './components/footer';
 import CollapsibleExample from './components/header';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Home() {
   const router = useRouter();
