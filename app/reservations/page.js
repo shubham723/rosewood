@@ -1,96 +1,165 @@
-import React from 'react';
+'use client'
+import axios from 'axios';
+import React, { useState } from 'react';
+import { Spinner } from 'react-bootstrap';
+import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 import Carosusel from '../components/carosusel';
 import Footer from '../components/footer';
 import CollapsibleExample from '../components/header';
 
 const Reservations = () => {
+    const [loading, setLoading] = useState(false);
+
+    const {
+        register,
+        handleSubmit,
+        watch,
+        formState: { errors },
+        reset
+    } = useForm({
+        defaultValues: {
+            name: '',
+            phone: '',
+            email: '',
+            checkInDate: '',
+            checkOutDate: '',
+            adultCount: 1,
+            childrenCount: 1,
+            message: ''
+        }
+    });
+
+    const onSubmit = async (data) => {
+        setLoading(true);
+        try {
+            await axios.post('/api/booking', data);
+            toast.success("Enquiry Sent. We'll be in touch shortly");
+            reset();
+            setLoading(false);
+        } catch (error) {
+            toast.error("Something went wrong.Please try again later.");
+            setLoading(false);
+        }
+    };
+
+    console.log(watch("name"))
+    console.log(errors)
     return (
         <>
             <CollapsibleExample />
 
-            <Carosusel heading={"Reservation Form"} menu={"RESERVATION"}  />
+            <Carosusel heading={"Reservation Form"} menu={"RESERVATION"} />
 
-            <section class="section contact-section" id="next">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
-                            <form action="#" method="post" class="bg-white p-md-5 p-4 mb-5 border">
-                                <div class="row">
-                                    <div class="col-md-6 form-group">
-                                        <label class="text-black font-weight-bold" for="name">Name</label>
-                                        <input type="text" id="name" class="form-control" />
+            <section className="section contact-section" id="next">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-7" data-aos="fade-up" data-aos-delay="100">
+                            <form className="bg-white p-md-5 p-4 mb-5 border" onSubmit={handleSubmit(onSubmit)}>
+                                <div className="row">
+                                    <div className="col-md-6 form-group">
+                                        <label className="text-black font-weight-bold" for="name">Name</label>
+                                        <input type="text" id="name" className="form-control"  {...register("name", { required: 'Name is required' })} />
+                                        {errors.name && (
+                                            <span className="error">{errors.name.message}</span>
+                                        )}
                                     </div>
-                                    <div class="col-md-6 form-group">
-                                        <label class="text-black font-weight-bold" for="phone">Phone</label>
-                                        <input type="text" id="phone" class="form-control" />
+                                    <div className="col-md-6 form-group">
+                                        <label className="text-black font-weight-bold" for="phone">Phone</label>
+                                        <input type="text" id="phone" className="form-control"  {...register("phone", { required: 'Phone is required',  })} />
+                                        {errors.phone && (
+                                            <span className="error">{errors.phone.message}</span>
+                                        )}
                                     </div>
                                 </div>
 
-                                <div class="row">
-                                    <div class="col-md-12 form-group">
-                                        <label class="text-black font-weight-bold" for="email">Email</label>
-                                        <input type="email" id="email" class="form-control" />
+                                <div className="row">
+                                    <div className="col-md-12 form-group">
+                                        <label className="text-black font-weight-bold" for="email">Email</label>
+                                        <input type="email" id="email" className="form-control" aria-invalid={errors.mail ? "true" : "false"} {...register("email", { required: 'Email is required'})} />
+                                        {errors.email && (
+                                            <span className="error">{errors.email.message}</span>
+                                        )}
                                     </div>
                                 </div>
 
-                                <div class="row">
-                                    <div class="col-md-6 form-group">
-                                        <label class="text-black font-weight-bold" for="checkin_date">Date Check In</label>
-                                        <input type="text" id="checkin_date" class="form-control" />
+                                <div className="row">
+                                    <div className="col-md-6 form-group">
+                                        <label className="text-black font-weight-bold" for="checkin_date">Date Check In</label>
+                                        <input type="date" id="checkin_date" className="form-control"  {...register("checkInDate", { required: 'Check In Date is required'})} />
+                                        {errors.checkInDate && (
+                                            <span className="error">{errors.checkInDate.message}</span>
+                                        )}
                                     </div>
-                                    <div class="col-md-6 form-group">
-                                        <label class="text-black font-weight-bold" for="checkout_date">Date Check Out</label>
-                                        <input type="text" id="checkout_date" class="form-control" />
+                                    <div className="col-md-6 form-group">
+                                        <label className="text-black font-weight-bold" for="checkout_date">Date Check Out</label>
+                                        <input type="date" id="checkout_date" className="form-control"  {...register("checkOutDate", { required: 'Check Out Date is required'} )} />
+                                        {errors.checkOutDate && (
+                                            <span className="error">{errors.checkOutDate.message}</span>
+                                        )}
                                     </div>
                                 </div>
 
-                                <div class="row">
-                                    <div class="col-md-6 form-group">
-                                        <label for="adults" class="font-weight-bold text-black">Adults</label>
-                                        <div class="field-icon-wrap">
-                                            <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                                            <select name="" id="adults" class="form-control">
-                                                <option value="">1</option>
-                                                <option value="">2</option>
-                                                <option value="">3</option>
-                                                <option value="">4+</option>
+                                <div className="row">
+                                    <div className="col-md-6 form-group">
+                                        <label for="adults" className="font-weight-bold text-black">Adults</label>
+                                        <div className="field-icon-wrap">
+                                            <div className="icon"><span className="ion-ios-arrow-down"></span></div>
+                                            <select name="" id="adults" className="form-control"  {...register("adultCount", { required: 'Adult Count is required'})} >
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4+</option>
                                             </select>
+                                            {errors.adultCount && (
+                                                <span className="error">{errors.adultCount.message}</span>
+                                            )}
                                         </div>
                                     </div>
-                                    <div class="col-md-6 form-group">
-                                        <label for="children" class="font-weight-bold text-black">Children</label>
-                                        <div class="field-icon-wrap">
-                                            <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                                            <select name="" id="children" class="form-control">
-                                                <option value="">1</option>
-                                                <option value="">2</option>
-                                                <option value="">3</option>
-                                                <option value="">4+</option>
+                                    <div className="col-md-6 form-group">
+                                        <label for="children" className="font-weight-bold text-black">Children</label>
+                                        <div className="field-icon-wrap">
+                                            <div className="icon"><span className="ion-ios-arrow-down"></span></div>
+                                            <select name="" id="children" className="form-control"  {...register("childrenCount", { required: 'Children Count is required'})} >
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4+</option>
                                             </select>
+                                            {errors.childrenCount && (
+                                                <span className="error">{errors.childrenCount.message}</span>
+                                            )}
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="row mb-4">
-                                    <div class="col-md-12 form-group">
-                                        <label class="text-black font-weight-bold" for="message">Notes</label>
-                                        <textarea name="message" id="message" class="form-control " cols="30" rows="8"></textarea>
+                                <div className="row mb-4">
+                                    <div className="col-md-12 form-group">
+                                        <label className="text-black font-weight-bold" for="message">Notes</label>
+                                        <textarea name="message" id="message" className="form-control " cols="30" rows="8"  {...register("message", { required: 'Message is required'})} ></textarea>
+                                        {errors.message && (
+                                            <span className="error">{errors.message.message}</span>
+                                        )}
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-6 form-group">
-                                        <input type="submit" value="Reserve Now" class="btn btn-primary text-white py-3 px-5 font-weight-bold mainBtnn b50" />
+                                <div className="row">
+                                    <div className="col-md-6 form-group">
+                                        <button type="submit" className="btn btn-primary text-white py-3 px-5 font-weight-bold mainBtnn b50" disabled={loading}>
+                                            {
+                                                loading ? <Spinner animation='grow'/> : 'Reserve Now'
+                                            }
+                                        </button>
                                     </div>
                                 </div>
                             </form>
                         </div>
-                        
-                        <div class="col-md-5" data-aos="fade-up" data-aos-delay="200">
-                            <div class="row">
-                                <div class="col-md-10 ml-auto contact-info">
-                                    <p><span class="d-block">Address:</span> <span class="text-black"> 98 West 21th Street, Suite 721 New York NY 10016</span></p>
-                                    <p><span class="d-block">Phone:</span> <span class="text-black"> (+1) 435 3533</span></p>
-                                    <p><span class="d-block">Email:</span> <span class="text-black"> info@yourdomain.com</span></p>
+
+                        <div className="col-md-5" data-aos="fade-up" data-aos-delay="200">
+                            <div className="row">
+                                <div className="col-md-10 ml-auto contact-info">
+                                    <p><span className="d-block">Address:</span> <span className="text-black"> 98 West 21th Street, Suite 721 New York NY 10016</span></p>
+                                    <p><span className="d-block">Phone:</span> <span className="text-black"> (+1) 435 3533</span></p>
+                                    <p><span className="d-block">Email:</span> <span className="text-black"> info@yourdomain.com</span></p>
                                 </div>
                             </div>
                         </div>
@@ -98,18 +167,7 @@ const Reservations = () => {
                 </div>
             </section>
 
-            <section class="section bg-image overlay" style={{ backgroundImage: 'url(images/hero_4.jpg)' }}>
-                <div class="container" >
-                    <div class="row align-items-center">
-                        <div class="col-12 col-md-6 text-center mb-4 mb-md-0 text-md-left" data-aos="fade-up">
-                            <h2 class="text-white font-weight-bold">A Best Place To Stay. Reserve Now!</h2>
-                        </div>
-                        <div class="col-12 col-md-6 text-center text-md-right" data-aos="fade-up" data-aos-delay="200">
-                            <a href="reservation.html" class="btn btn-outline-white-primary py-3 text-white px-5">Reserve Now</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            
 
             <Footer />
         </>

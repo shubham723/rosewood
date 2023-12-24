@@ -1,22 +1,31 @@
-'use client'
-import Image from 'next/image';
-import Availability from './components/availability';
+"use client"
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { ToastContainer } from 'react-toastify';
 import BestPlace from './components/bestPlace';
 import Footer from './components/footer';
 import CollapsibleExample from './components/header';
 
 export default function Home() {
+  const router = useRouter();
   return (
     <>
+      <ToastContainer />
       <CollapsibleExample />
       {/* <!-- END head --> */}
 
-      <section class="site-hero overlay" style={{ backgroundImage: 'url(images/rosewood.jpeg)' }}>
+      <section class="site-hero overlay" style={{ backgroundImage: 'url(images/rosewood3.jpeg)' }}>
         <div class="container">
           <div class="row site-hero-inner justify-content-center align-items-center">
             <div class="col-md-10 text-center" data-aos="fade-up">
-              <span class="custom-caption text-uppercase text-white d-block  mb-3">Welcome To 5 <span class="fa fa-star text-primary"></span>   Hotel</span>
+              <span class="custom-caption text-uppercase text-white d-block  mb-3">Welcome To <span class="fa fa-star text-primary"></span>  Rosewood Hotel</span>
               <h1 class="heading">A Best Place To Stay</h1>
+              <div className='center'>
+              {/* <Link href="/"> */}
+              <button class="btn btn-primary btn-block text-white btnn w30 mainBtnn" type='submit' onClick={() => router.push('/reservations')}>Check Availabilty</button>
+
+              {/* </Link> */}
+              </div>
             </div>
           </div>
         </div>
@@ -29,7 +38,7 @@ export default function Home() {
       </section>
       {/* <!-- END section --> */}
 
-      <Availability />
+      {/* <Availability /> */}
 
       <section class="py-5 bg-light">
         <div class="container">
@@ -42,8 +51,8 @@ export default function Home() {
             </div>
             <div class="col-md-12 col-lg-4 order-lg-1" data-aos="fade-up">
               <h2 class="heading">Welcome!</h2>
-              <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-              <p><a href="#" class="btn btn-primary text-white py-2 mr-3  btnn mainBtnn">Learn More</a> <span class="mr-3 font-family-serif"></span></p>
+              <p class="mb-4">Experience comfort and luxury at our hotel in the heart of Zirakpur. Enjoy modern style, excellent service, and make your stay unforgettable</p>
+              <p><Link href="/about" class="btn btn-primary text-white py-2 mr-3 btnn mainBtnn">Learn More</Link> <span class="mr-3 font-family-serif"></span></p>
             </div>
 
           </div>
@@ -55,16 +64,16 @@ export default function Home() {
           <div class="row justify-content-center text-center mb-5">
             <div class="col-md-7">
               <h2 class="heading" data-aos="fade-up">Rooms &amp; Suites</h2>
-              <p data-aos="fade-up" data-aos-delay="100">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+              <p data-aos="fade-up" data-aos-delay="100">Choose from a variety of cozy rooms and spacious suites for a comfortable and stylish stay</p>
             </div>
           </div>
           <div class="row">
             <div class="col-md-6 col-lg-4" data-aos="fade-up">
-              <a href="#" class="room">
+              <a class="room pointer" onClick={() => router.push('/rooms')}>
                 <figure class="img-wrap">
                   <img src="/images/room5.jpeg" alt="Free website template" class="img-fluid mb-3" width="100" height="100" style={{ width: '100%', }} />
                 </figure>
-                <div class="p-3 text-center room-info">
+                <div class="p-3 text-center room-info" onClick={() => router.push('/rooms')}>
                   <h2>Single Room</h2>
                   <span class="text-uppercase letter-spacing-1 mainClr">90$ / per night</span>
                 </div>
@@ -72,7 +81,7 @@ export default function Home() {
             </div>
 
             <div class="col-md-6 col-lg-4" data-aos="fade-up">
-              <a href="#" class="room">
+              <a class="room pointer" onClick={() => router.push('/rooms')}>
                 <figure class="img-wrap">
                   <img src="images/room7.jpeg" alt="Free website template" class="img-fluid mb-3" />
                 </figure>
@@ -84,11 +93,11 @@ export default function Home() {
             </div>
 
             <div class="col-md-6 col-lg-4" data-aos="fade-up">
-              <a href="#" class="room">
+              <a class="room pointer" onClick={() => router.push('/rooms')}>
                 <figure class="img-wrap">
                   <img src="images/room6.jpeg" alt="Free website template" class="img-fluid mb-3" />
                 </figure>
-                <div class="p-3 text-center room-info">
+                <div class="p-3 text-center room-info pointer">
                   <h2>Presidential Room</h2>
                   <span class="text-uppercase letter-spacing-1 mainClr">250$ / per night</span>
                 </div>
@@ -103,7 +112,7 @@ export default function Home() {
           <div class="row justify-content-center text-center mb-5">
             <div class="col-md-7">
               <h2 class="heading text-white" data-aos="fade">Our Restaurant Menu</h2>
-              <p class="text-white" data-aos="fade" data-aos-delay="100">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+              <p class="text-white" data-aos="fade" data-aos-delay="100">Savor a delicious array of dishes with our diverse restaurant menu, offering something for every palate</p>
             </div>
           </div>
           <div class="food-menu-tabs" data-aos="fade">
@@ -255,42 +264,42 @@ export default function Home() {
           <div class="row justify-content-center text-center mb-5">
             <div class="col-md-7">
               <h2 class="heading" data-aos="fade-up">Events</h2>
-              <p data-aos="fade-up">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+              <p data-aos="fade-up">Create memorable moments with our versatile event spaces, perfect for any celebration or gathering.</p>
             </div>
           </div>
           <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="200">
+              <div class="media media-custom d-block mb-4 h-100">
+                <a class="mb-4 d-block"><img src="images/event2.jpeg" alt="Image placeholder" class="img-fluid" /></a>
+                <div class="media-body">
+                  {/* <span class="meta-post">February 26, 2018</span> */}
+                  <h2 class="mt-0 mb-3">"Everlasting Love Knot: Wedding Journey"</h2>
+                  <p>Celebrate the union of hearts at "Everlasting Love Knot," where your journey begins. Celebrate a day filled with love, laughter, and cherished moments. Celebrate, let's create memories that will last a lifetime, surrounded by the warmth of family and friends.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="100">
 
               <div class="media media-custom d-block mb-4 h-100">
-                <a href="#" class="mb-4 d-block"><img src="images/event1.jpeg" alt="Image placeholder" class="img-fluid" /></a>
+                <a class="mb-4 d-block"><img src="images/event1.jpeg" alt="Image placeholder" class="img-fluid" /></a>
                 <div class="media-body">
-                  <span class="meta-post">February 26, 2018</span>
-                  <h2 class="mt-0 mb-3"><a href="#">Travel Hacks to Make Your Flight More Comfortable</a></h2>
-                  <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                  {/* <span class="meta-post">February 26, 2018</span> */}
+                  <h2 class="mt-0 mb-3">Timeless Celebrations: Where Every Moment Matters</h2>
+                  <p>Celebrate unforgettable moments at Timeless Celebrations, where every gathering becomes a cherished memory. Whether it's a birthday, kitty party, or anniversary, we believe in making each moment special. Experience the joy of togetherness and create lasting memories with friends, family, and loved ones. We make sure to adds magic to celebrations!</p>
                 </div>
               </div>
 
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="200">
+            {/* <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="300">
               <div class="media media-custom d-block mb-4 h-100">
-                <a href="#" class="mb-4 d-block"><img src="images/event2.jpeg" alt="Image placeholder" class="img-fluid" /></a>
-                <div class="media-body">
-                  <span class="meta-post">February 26, 2018</span>
-                  <h2 class="mt-0 mb-3"><a href="#">5 Job Types That Aallow You To Earn As You Travel The World</a></h2>
-                  <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="300">
-              <div class="media media-custom d-block mb-4 h-100">
-                <a href="#" class="mb-4 d-block"><img src="images/event5.jpeg" alt="Image placeholder" class="img-fluid" /></a>
+                <a href="#" class="mb-4 d-block"><img src="/images/event6.jpeg" alt="Image placeholder" class="img-fluid" /></a>
                 <div class="media-body">
                   <span class="meta-post">February 26, 2018</span>
                   <h2 class="mt-0 mb-3"><a href="#">30 Great Ideas On Gifts For Travelers</a></h2>
                   <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. t is a paradisematic country, in which roasted parts of sentences.</p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

@@ -34,6 +34,12 @@
   padding-top: 10px !important;
   padding-bottom: 10px !important;
   border-radius: 50px !important;
+  background-color: transparent !important;
+}
+
+.w30 {
+
+  width: 30% !important;
 }
 
 .mainBtnn {
@@ -58,4 +64,13 @@
   .img-absolute {
     right: -60px;
   }
+}
+
+.error{ 
+  color: red;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
 }

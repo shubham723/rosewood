@@ -1,4 +1,6 @@
+import Link from 'next/link';
 import React from 'react';
+import BestPlace from '../components/bestPlace';
 import Carosusel from '../components/carosusel';
 import Footer from '../components/footer';
 import CollapsibleExample from '../components/header';
@@ -21,8 +23,8 @@ const About = () => {
                         </div>
                         <div class="col-md-12 col-lg-4 order-lg-1" data-aos="fade-up">
                             <h2 class="heading">Welcome!</h2>
-                            <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                            <p><a href="#" class="btn btn-primary text-white py-2 mr-3 btnn mainBtnn">Learn More</a> </p>
+                            <p class="mb-4">Experience comfort in our stylish hotel with modern amenities, offering a welcoming retreat for a memorable stay in the heart of Zirakpur. Enjoy top-notch service and cozy accommodations, making your visit truly special.</p>
+                            <p><Link href="/reservations" class="btn btn-primary text-white py-2 mr-3 btnn mainBtnn">Book Now</Link> </p>
                         </div>
 
                     </div>
@@ -111,18 +113,7 @@ const About = () => {
                 </div>
             </div>
 
-            <section class="section bg-image overlay" style={{ backgroundImage: 'url(images/hero_4.jpg)' }}>
-                <div class="container" >
-                    <div class="row align-items-center">
-                        <div class="col-12 col-md-6 text-center mb-4 mb-md-0 text-md-left" data-aos="fade-up">
-                            <h2 class="text-white font-weight-bold">A Best Place To Stay. Reserve Now!</h2>
-                        </div>
-                        <div class="col-12 col-md-6 text-center text-md-right" data-aos="fade-up" data-aos-delay="200">
-                            <a href="reservation.html" class="btn btn-outline-white-primary py-3 text-white px-5">Reserve Now</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <BestPlace />
 
             <Footer />
         </>

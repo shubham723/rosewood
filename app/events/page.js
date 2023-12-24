@@ -1,4 +1,5 @@
 import React from 'react';
+import BestPlace from '../components/bestPlace';
 import Carosusel from '../components/carosusel';
 import Footer from '../components/footer';
 import CollapsibleExample from '../components/header';
@@ -8,93 +9,39 @@ const Events = () => {
         <>
             <CollapsibleExample />
 
-            <Carosusel heading={"Events"} menu={"EVENTS"}  />
+            <Carosusel heading={"Events"} menu={"EVENTS"} />
 
             <section class="section blog-post-entry bg-light" id="next">
                 <div class="container">
 
                     <div class="row">
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-12 post mb-5" data-aos="fade-up" data-aos-delay="100">
-
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="200">
                             <div class="media media-custom d-block mb-4 h-100">
-                                <a href="#" class="mb-4 d-block"><img src="images/img_1.jpg" alt="Image placeholder" class="img-fluid" /></a>
+                                <a class="mb-4 d-block"><img src="images/event2.jpeg" alt="Image placeholder" class="img-fluid" /></a>
                                 <div class="media-body">
-                                    <span class="meta-post">February 26, 2018</span>
-                                    <h2 class="mt-0 mb-3"><a href="#">Travel Hacks to Make Your Flight More Comfortable</a></h2>
-                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-12 post mb-5" data-aos="fade-up" data-aos-delay="200">
-                            <div class="media media-custom d-block mb-4 h-100">
-                                <a href="#" class="mb-4 d-block"><img src="images/img_2.jpg" alt="Image placeholder" class="img-fluid" /></a>
-                                <div class="media-body">
-                                    <span class="meta-post">February 26, 2018</span>
-                                    <h2 class="mt-0 mb-3"><a href="#">5 Job Types That Aallow You To Earn As You Travel The World</a></h2>
-                                    <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                                    {/* <span class="meta-post">February 26, 2018</span> */}
+                                    <h2 class="mt-0 mb-3"><a href="#">"Everlasting Love Knot: Wedding Journey"</a></h2>
+                                    <p>Celebrate the union of hearts at "Everlasting Love Knot," where your journey begins. Celebrate a day filled with love, laughter, and cherished moments. Celebrate, let's create memories that will last a lifetime, surrounded by the warmth of family and friends.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-12 post mb-5" data-aos="fade-up" data-aos-delay="300">
-                            <div class="media media-custom d-block mb-4 h-100">
-                                <a href="#" class="mb-4 d-block"><img src="images/img_3.jpg" alt="Image placeholder" class="img-fluid" /></a>
-                                <div class="media-body">
-                                    <span class="meta-post">February 26, 2018</span>
-                                    <h2 class="mt-0 mb-3"><a href="#">30 Great Ideas On Gifts For Travelers</a></h2>
-                                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. t is a paradisematic country, in which roasted parts of sentences.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-12 post mb-5" data-aos="fade-up" data-aos-delay="100">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="100">
 
                             <div class="media media-custom d-block mb-4 h-100">
-                                <a href="#" class="mb-4 d-block"><img src="images/img_4.jpg" alt="Image placeholder" class="img-fluid" /></a>
+                                <a class="mb-4 d-block"><img src="images/event1.jpeg" alt="Image placeholder" class="img-fluid" /></a>
                                 <div class="media-body">
-                                    <span class="meta-post">February 26, 2018</span>
-                                    <h2 class="mt-0 mb-3"><a href="#">Travel Hacks to Make Your Flight More Comfortable</a></h2>
-                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                    {/* <span class="meta-post">February 26, 2018</span> */}
+                                    <h2 class="mt-0 mb-3"><a href="#">Timeless Celebrations: Where Every Moment Matters</a></h2>
+                                    <p>Celebrate unforgettable moments at Timeless Celebrations, where every gathering becomes a cherished memory. Whether it's a birthday, kitty party, or anniversary, we believe in making each moment special. Experience the joy of togetherness and create lasting memories with friends, family, and loved ones. We make sure to adds magic to celebrations!</p>
                                 </div>
                             </div>
 
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-12 post mb-5" data-aos="fade-up" data-aos-delay="200">
-                            <div class="media media-custom d-block mb-4 h-100">
-                                <a href="#" class="mb-4 d-block"><img src="images/img_1.jpg" alt="Image placeholder" class="img-fluid" /></a>
-                                <div class="media-body">
-                                    <span class="meta-post">February 26, 2018</span>
-                                    <h2 class="mt-0 mb-3"><a href="#">5 Job Types That Aallow You To Earn As You Travel The World</a></h2>
-                                    <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-12 post mb-5" data-aos="fade-up" data-aos-delay="300">
-                            <div class="media media-custom d-block mb-4 h-100">
-                                <a href="#" class="mb-4 d-block"><img src="images/img_2.jpg" alt="Image placeholder" class="img-fluid" /></a>
-                                <div class="media-body">
-                                    <span class="meta-post">February 26, 2018</span>
-                                    <h2 class="mt-0 mb-3"><a href="#">30 Great Ideas On Gifts For Travelers</a></h2>
-                                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. t is a paradisematic country, in which roasted parts of sentences.</p>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="section bg-image overlay" style={{ backgroundImage: 'url(images/hero_4.jpg)' }}>
-                <div class="container" >
-                    <div class="row align-items-center">
-                        <div class="col-12 col-md-6 text-center mb-4 mb-md-0 text-md-left" data-aos="fade-up">
-                            <h2 class="text-white font-weight-bold">A Best Place To Stay. Reserve Now!</h2>
-                        </div>
-                        <div class="col-12 col-md-6 text-center text-md-right" data-aos="fade-up" data-aos-delay="200">
-                            <a href="reservation.html" class="btn btn-outline-white-primary py-3 text-white px-5">Reserve Now</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <BestPlace />
 
             <Footer />
         </>

@@ -7,7 +7,7 @@ const Carosusel = ({ heading, menu }) => {
     // const router = useRouter();
 
     return (
-        <section class="site-hero inner-page overlay" style={{ backgroundImage: 'url(images/rosewood.jpeg)' }}>
+        <section class="site-hero inner-page overlay" style={{ backgroundImage: 'url(images/rosewood3.jpeg)' }}>
             <div class="container">
                 <div class="row site-hero-inner justify-content-center align-items-center">
                     <div class="col-md-10 text-center" data-aos="fade">

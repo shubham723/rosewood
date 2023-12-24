@@ -1,23 +1,26 @@
-import React from 'react';
-import Availability from '../components/availability';
+'use client'
+import { useRouter } from 'next/navigation';
+import BestPlace from '../components/bestPlace';
 import Carosusel from '../components/carosusel';
 import Footer from '../components/footer';
 import CollapsibleExample from '../components/header';
 
 const Rooms = () => {
+  const router = useRouter();
+
   return (
     <>
       <CollapsibleExample />
 
       <Carosusel heading={"Rooms"} menu={"ROOMS"} />
 
-      <Availability />
+      {/* <Availability /> */}
 
       <section class="section">
         <div class="container">
           <div class="row">
             <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up">
-              <a href="#" class="room">
+              <a class="room pointer" onClick={() => router.push('/reservations')}>
                 <figure class="img-wrap">
                   <img src="images/room5.jpeg" alt="Free website template" class="img-fluid mb-3" />
                 </figure>
@@ -29,7 +32,7 @@ const Rooms = () => {
             </div>
 
             <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up">
-              <a href="#" class="room">
+              <a class="room pointer" onClick={() => router.push('/reservations')}>
                 <figure class="img-wrap">
                   <img src="images/room7.jpeg" alt="Free website template" class="img-fluid mb-3" />
                 </figure>
@@ -41,7 +44,7 @@ const Rooms = () => {
             </div>
 
             <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up">
-              <a href="#" class="room">
+              <a class="room pointer" onClick={() => router.push('/reservations')}>
                 <figure class="img-wrap">
                   <img src="images/room6.jpeg" alt="Free website template" class="img-fluid mb-3" />
                 </figure>
@@ -60,7 +63,7 @@ const Rooms = () => {
           <div class="row justify-content-center text-center mb-5">
             <div class="col-md-7">
               <h2 class="heading" data-aos="fade">Great Offers</h2>
-              <p data-aos="fade">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+              <p data-aos="fade">Discover irresistible deals and save big with our great offers, adding value and excitement to your experience at our establishment</p>
             </div>
           </div>
 
@@ -69,8 +72,8 @@ const Rooms = () => {
             <div class="text">
               <span class="d-block mb-4"><span class="display-4 mainClr">$199</span> <span class="text-uppercase letter-spacing-2">/ per night</span> </span>
               <h2 class="mb-4">Family Room</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-              <p><a href="#" class="btn btn-primary text-white btnn mainBtnn">Book Now</a></p>
+              <p>Discover comfort and togetherness in our family room. Thoughtfully designed for shared moments, this inviting space offers a cozy retreat for the whole family. Enjoy quality time surrounded by warmth and modern amenities. Make lasting memories in a room that feels like home.</p>
+              <p><a class="btn btn-primary text-white btnn mainBtnn pointer" onClick={() => router.push('/reservations')}>Book Now</a></p>
             </div>
           </div>
           
@@ -79,25 +82,14 @@ const Rooms = () => {
             <div class="text order-1">
               <span class="d-block mb-4"><span class="display-4 mainClr">$299</span> <span class="text-uppercase letter-spacing-2">/ per night</span> </span>
               <h2 class="mb-4">Presidential Room</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-              <p><a href="#" class="btn btn-primary text-white btnn mainBtnn">Book Now</a></p>
+              <p>Indulge in luxury and prestige in our Presidential Room. Experience opulent living with spacious accommodations, exquisite decor, and top-notch amenities. Elevate your stay with exclusive services tailored for a truly regal experience. Unwind in style and enjoy unparalleled comfort in the pinnacle of sophistication</p>
+              <p><a class="btn btn-primary text-white btnn mainBtnn pointer" onClick={() => router.push('/reservations')}>Book Now</a></p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section bg-image overlay" style={{ backgroundImage: 'url(images/hero_4.jpg)' }}>
-        <div class="container" >
-          <div class="row align-items-center">
-            <div class="col-12 col-md-6 text-center mb-4 mb-md-0 text-md-left" data-aos="fade-up">
-              <h2 class="text-white font-weight-bold">A Best Place To Stay. Reserve Now!</h2>
-            </div>
-            <div class="col-12 col-md-6 text-center text-md-right" data-aos="fade-up" data-aos-delay="200">
-              <a href="reservation.html" class="btn btn-outline-white-primary py-3 text-white px-5">Reserve Now</a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <BestPlace />
 
       <Footer />
     </>
