@@ -47,7 +47,7 @@ export default function Home() {
               <figure class="img-absolute">
                 <img src="images/food-1.jpg" alt="Image" class="img-fluid" />
               </figure>
-              <img src="images/room1.jpeg" alt="Image" class="img-fluid rounded" />
+              <img src="images/room6.jpeg" alt="Image" class="img-fluid rounded" />
             </div>
             <div class="col-md-12 col-lg-4 order-lg-1" data-aos="fade-up">
               <h2 class="heading">Welcome!</h2>
@@ -75,7 +75,7 @@ export default function Home() {
                 </figure>
                 <div class="p-3 text-center room-info" onClick={() => router.push('/rooms')}>
                   <h2>Single Room</h2>
-                  <span class="text-uppercase letter-spacing-1 mainClr">90$ / per night</span>
+                  <span class="text-uppercase letter-spacing-1 mainClr">Rs. 1000 / per night</span>
                 </div>
               </a>
             </div>
@@ -87,7 +87,7 @@ export default function Home() {
                 </figure>
                 <div class="p-3 text-center room-info">
                   <h2>Family Room</h2>
-                  <span class="text-uppercase letter-spacing-1 mainClr">120$ / per night</span>
+                  <span class="text-uppercase letter-spacing-1 mainClr">Rs. 1200 / per night</span>
                 </div>
               </a>
             </div>
@@ -99,7 +99,7 @@ export default function Home() {
                 </figure>
                 <div class="p-3 text-center room-info pointer">
                   <h2>Presidential Room</h2>
-                  <span class="text-uppercase letter-spacing-1 mainClr">250$ / per night</span>
+                  <span class="text-uppercase letter-spacing-1 mainClr">Rs. 1500 / per night</span>
                 </div>
               </a>
             </div>
@@ -134,36 +134,36 @@ export default function Home() {
                 <div class="row">
                   <div class="col-md-6">
                     <div class="food-menu mb-5">
-                      <span class="d-block h4 mb-3 mainClr">$20.00</span>
-                      <h3 class="text-white"><a href="#" class="text-white">Murgh Tikka Masala</a></h3>
-                      <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                      <span class="d-block h4 mb-3 mainClr">Rs 550.00</span>
+                      <h3 class="text-white"><a class="text-white">Afghani Chicken</a></h3>
+                      <p class="text-white text-opacity-7">Savor the rich and flavorful taste of Afghani Chicken, a delectable dish with aromatic spices and succulent chicken.</p>
                     </div>
                     <div class="food-menu mb-5">
-                      <span class="d-block h4 mb-3 mainClr">$35.00</span>
-                      <h3 class="text-white"><a href="#" class="text-white">Fish Moilee</a></h3>
-                      <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                      <span class="d-block h4 mb-3 mainClr">Rs 520.00</span>
+                      <h3 class="text-white"><a class="text-white">Chicken Tikka</a></h3>
+                      <p class="text-white text-opacity-7">Indulge in the tantalizing flavors of Chicken Tikka, perfectly marinated and grilled to perfection.</p>
                     </div>
                     <div class="food-menu mb-5">
-                      <span class="d-block h4 mb-3 mainClr">$15.00</span>
-                      <h3 class="text-white"><a href="#" class="text-white">Safed Gosht</a></h3>
-                      <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                      <span class="d-block h4 mb-3 mainClr">Rs 550.00</span>
+                      <h3 class="text-white"><a class="text-white">Murg Chicken Kabab</a></h3>
+                      <p class="text-white text-opacity-7">Enjoy the exquisite taste of Murg Chicken Kabab, a culinary delight featuring tender and flavorful grilled chicken.</p>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="food-menu mb-5">
-                      <span class="d-block h4 mb-3 mainClr">$10.00</span>
-                      <h3 class="text-white"><a href="#" class="text-white">French Toast Combo</a></h3>
-                      <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                      <span class="d-block h4 mb-3 mainClr">Rs 520.00</span>
+                      <h3 class="text-white"><a class="text-white">Panner Tikka</a></h3>
+                      <p class="text-white text-opacity-7">Savor the irresistible goodness of Paneer Tikka, a mouthwatering dish with marinated and grilled paneer cubes.</p>
                     </div>
                     <div class="food-menu mb-5">
-                      <span class="d-block h4 mb-3 mainClr">$8.35</span>
-                      <h3 class="text-white"><a href="#" class="text-white">Vegie Omelet</a></h3>
-                      <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                      <span class="d-block h4 mb-3 mainClr">RS 480.00</span>
+                      <h3 class="text-white"><a class="text-white">Manchurian Sea Kabab</a></h3>
+                      <p class="text-white text-opacity-7">Indulge in the exotic blend of flavors with Manchurian Sea Kabab, a delightful fusion of Manchurian and kabab featuring succulent seafood.</p>
                     </div>
                     <div class="food-menu mb-5">
-                      <span class="d-block h4 mb-3 mainClr">$22.00</span>
-                      <h3 class="text-white"><a href="#" class="text-white">Chorizo &amp; Egg Omelet</a></h3>
-                      <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                      <span class="d-block h4 mb-3 mainClr">Rs 320.00</span>
+                      <h3 class="text-white"><a class="text-white">Mushroom Duplex</a></h3>
+                      <p class="text-white text-opacity-7">Experience the savory delight of Mushroom Duplex, a culinary masterpiece featuring stuffed mushrooms with a delicious twist.</p>
                     </div>
                   </div>
                 </div>

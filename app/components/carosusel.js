@@ -23,7 +23,7 @@ const Carosusel = ({ heading, menu }) => {
                 </div>
             </div>
 
-            <a class="mouse smoothscroll" href="#next">
+            <a class="mouse smoothscroll">
                 <div class="mouse-icon">
                     <span class="mouse-wheel"></span>
                 </div>

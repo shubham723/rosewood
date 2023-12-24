@@ -66,7 +66,12 @@ const Reservations = () => {
                                     </div>
                                     <div className="col-md-6 form-group">
                                         <label className="text-black font-weight-bold" for="phone">Phone</label>
-                                        <input type="text" id="phone" className="form-control"  {...register("phone", { required: 'Phone is required',  })} />
+                                        <input type="number" min={0} id="phone" className="form-control"  {...register("phone", {
+                                            required: 'Phone is required', pattern: {
+                                                value: /^[0-9]{10}$/i,
+                                                message: 'Invalid phone number'
+                                            }
+                                        })} />
                                         {errors.phone && (
                                             <span className="error">{errors.phone.message}</span>
                                         )}
@@ -76,7 +81,12 @@ const Reservations = () => {
                                 <div className="row">
                                     <div className="col-md-12 form-group">
                                         <label className="text-black font-weight-bold" for="email">Email</label>
-                                        <input type="email" id="email" className="form-control" aria-invalid={errors.mail ? "true" : "false"} {...register("email", { required: 'Email is required'})} />
+                                        <input type="email" id="email" className="form-control" aria-invalid={errors.mail ? "true" : "false"} {...register("email", {
+                                            required: 'Email is required', pattern: {
+                                                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                                                message: 'Invalid email address'
+                                            }
+                                        })} />
                                         {errors.email && (
                                             <span className="error">{errors.email.message}</span>
                                         )}
@@ -86,14 +96,14 @@ const Reservations = () => {
                                 <div className="row">
                                     <div className="col-md-6 form-group">
                                         <label className="text-black font-weight-bold" for="checkin_date">Date Check In</label>
-                                        <input type="date" id="checkin_date" className="form-control"  {...register("checkInDate", { required: 'Check In Date is required'})} />
+                                        <input type="date" id="checkin_date" className="form-control"  {...register("checkInDate", { required: 'Check In Date is required' })} />
                                         {errors.checkInDate && (
                                             <span className="error">{errors.checkInDate.message}</span>
                                         )}
                                     </div>
                                     <div className="col-md-6 form-group">
                                         <label className="text-black font-weight-bold" for="checkout_date">Date Check Out</label>
-                                        <input type="date" id="checkout_date" className="form-control"  {...register("checkOutDate", { required: 'Check Out Date is required'} )} />
+                                        <input type="date" id="checkout_date" className="form-control"  {...register("checkOutDate", { required: 'Check Out Date is required' })} />
                                         {errors.checkOutDate && (
                                             <span className="error">{errors.checkOutDate.message}</span>
                                         )}
@@ -105,7 +115,7 @@ const Reservations = () => {
                                         <label for="adults" className="font-weight-bold text-black">Adults</label>
                                         <div className="field-icon-wrap">
                                             <div className="icon"><span className="ion-ios-arrow-down"></span></div>
-                                            <select name="" id="adults" className="form-control"  {...register("adultCount", { required: 'Adult Count is required'})} >
+                                            <select name="" id="adults" className="form-control"  {...register("adultCount", { required: 'Adult Count is required' })} >
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
                                                 <option value="3">3</option>
@@ -120,7 +130,7 @@ const Reservations = () => {
                                         <label for="children" className="font-weight-bold text-black">Children</label>
                                         <div className="field-icon-wrap">
                                             <div className="icon"><span className="ion-ios-arrow-down"></span></div>
-                                            <select name="" id="children" className="form-control"  {...register("childrenCount", { required: 'Children Count is required'})} >
+                                            <select name="" id="children" className="form-control"  {...register("childrenCount", { required: 'Children Count is required' })} >
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
                                                 <option value="3">3</option>
@@ -136,7 +146,7 @@ const Reservations = () => {
                                 <div className="row mb-4">
                                     <div className="col-md-12 form-group">
                                         <label className="text-black font-weight-bold" for="message">Notes</label>
-                                        <textarea name="message" id="message" className="form-control " cols="30" rows="8"  {...register("message", { required: 'Message is required'})} ></textarea>
+                                        <textarea name="message" id="message" className="form-control " cols="30" rows="8"  {...register("message", { required: 'Message is required' })} ></textarea>
                                         {errors.message && (
                                             <span className="error">{errors.message.message}</span>
                                         )}
@@ -146,7 +156,7 @@ const Reservations = () => {
                                     <div className="col-md-6 form-group">
                                         <button type="submit" className="btn btn-primary text-white py-3 px-5 font-weight-bold mainBtnn b50" disabled={loading}>
                                             {
-                                                loading ? <Spinner animation='grow'/> : 'Reserve Now'
+                                                loading ? <Spinner animation='grow' /> : 'Reserve Now'
                                             }
                                         </button>
                                     </div>
@@ -157,9 +167,9 @@ const Reservations = () => {
                         <div className="col-md-5" data-aos="fade-up" data-aos-delay="200">
                             <div className="row">
                                 <div className="col-md-10 ml-auto contact-info">
-                                    <p><span className="d-block">Address:</span> <span className="text-black"> 98 West 21th Street, Suite 721 New York NY 10016</span></p>
-                                    <p><span className="d-block">Phone:</span> <span className="text-black"> (+1) 435 3533</span></p>
-                                    <p><span className="d-block">Email:</span> <span className="text-black"> info@yourdomain.com</span></p>
+                                    <p><span className="d-block">Address:</span> <span className="text-black"> SCO 7-8, Shri Ganesh Complex Zirakpur, Punjab 140603</span></p>
+                                    <p><span className="d-block">Phone:</span> <span className="text-black"> +91 7986612608 | +91 7347372702 | +91 9878459791 </span></p>
+                                    <p><span className="d-block">Email:</span> <span className="text-black"> hotelrosewood956@gmail.com</span></p>
                                 </div>
                             </div>
                         </div>
@@ -167,7 +177,7 @@ const Reservations = () => {
                 </div>
             </section>
 
-            
+
 
             <Footer />
         </>

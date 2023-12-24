@@ -19,7 +19,7 @@ const About = () => {
                             <figure class="img-absolute">
                                 <img src="images/food-1.jpg" alt="Free Website Template by Templateux" class="img-fluid" />
                             </figure>
-                            <img src="images/room4.jpeg" alt="Image" class="img-fluid rounded" />
+                            <img src="images/room6.jpeg" alt="Image" class="img-fluid rounded" />
                         </div>
                         <div class="col-md-12 col-lg-4 order-lg-1" data-aos="fade-up">
                             <h2 class="heading">Welcome!</h2>

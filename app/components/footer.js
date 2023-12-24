@@ -31,9 +31,9 @@ const Footer = () => {
             </ul>
           </div>
           <div class="col-md-6 mb-5 pr-md-5 contact-info">
-            <p><span class="d-flex align-center"><FaLocationDot /> <span className='ml-2'>Address: </span> </span> <span> 198 West 21th Street, <br /> Suite 721 New York NY 10016</span></p>
-            <p><span class="d-flex align-center"><FaPhoneAlt /> <span className='ml-2'> Phone: </span> </span> <span> (+1) 435 3533</span></p>
-            <p><span class="d-flex align-center"><MdEmail /> <span className='ml-2'> Email: </span> </span> <span> info@domain.com</span></p>
+            <p><span class="d-flex align-center"><FaLocationDot /> <span className='ml-2'>Address: </span> </span> <span> Sco 7-8, Shri Ganesh Complex <br /> Zirakpur, Punjab 140603</span></p>
+            <p><span class="d-flex align-center"><FaPhoneAlt /> <span className='ml-2'> Phone: </span> </span> <span> +91 7986612608 | +91 7347372702 | +91 9878459791</span></p>
+            <p><span class="d-flex align-center"><MdEmail /> <span className='ml-2'> Email: </span> </span> <span> hotelrosewood956@gmail.com</span></p>
           </div>
           {/* <div class="col-md-3 mb-5">
             <p>Sign up for our newsletter</p>
@@ -50,13 +50,13 @@ const Footer = () => {
           Copyright &copy; {new Date().getFullYear()} All rights reserverd
           </p>
             
-          <p class="col-md-6 text-right social d-flex">
+          {/* <p class="col-md-6 text-right social d-flex">
             <FaFacebook />
             <FaYoutube className='ms-3ll' />
             <FaInstagram className='ms-3' />
             <a href="#"><span class="fa fa-linkedin"></span></a>
             <a href="#"><span class="fa fa-vimeo"></span></a>
-          </p>
+          </p> */}
         </div>
       </div>
     </footer> 

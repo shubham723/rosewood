@@ -26,7 +26,7 @@ const Rooms = () => {
                 </figure>
                 <div class="p-3 text-center room-info">
                   <h2>Single Room</h2>
-                  <span class="text-uppercase letter-spacing-1 mainClr">90$ / per night</span>
+                  <span class="text-uppercase letter-spacing-1 mainClr">Rs.1000/per night</span>
                 </div>
               </a>
             </div>
@@ -38,7 +38,7 @@ const Rooms = () => {
                 </figure>
                 <div class="p-3 text-center room-info">
                   <h2>Family Room</h2>
-                  <span class="text-uppercase letter-spacing-1 mainClr">120$ / per night</span>
+                  <span class="text-uppercase letter-spacing-1 mainClr">Rs.1200/per night</span>
                 </div>
               </a>
             </div>
@@ -50,7 +50,7 @@ const Rooms = () => {
                 </figure>
                 <div class="p-3 text-center room-info">
                   <h2>Presidential Room</h2>
-                  <span class="text-uppercase letter-spacing-1 mainClr">250$ / per night</span>
+                  <span class="text-uppercase letter-spacing-1 mainClr">Rs.1500/per night</span>
                 </div>
               </a>
             </div>
@@ -68,9 +68,9 @@ const Rooms = () => {
           </div>
 
           <div class="site-block-half d-block d-lg-flex bg-white" data-aos="fade" data-aos-delay="100">
-            <a href="#" class="image d-block bg-image-2" style={{ backgroundImage: 'url(images/room2.jpeg)' }}></a>
+            <a class="image d-block bg-image-2" style={{ backgroundImage: 'url(images/room2.jpeg)' }}></a>
             <div class="text">
-              <span class="d-block mb-4"><span class="display-4 mainClr">$199</span> <span class="text-uppercase letter-spacing-2">/ per night</span> </span>
+              <span class="d-block mb-4"><span class="display-4 mainClr">Rs 1200</span> <span class="text-uppercase letter-spacing-2">/ per night</span> </span>
               <h2 class="mb-4">Family Room</h2>
               <p>Discover comfort and togetherness in our family room. Thoughtfully designed for shared moments, this inviting space offers a cozy retreat for the whole family. Enjoy quality time surrounded by warmth and modern amenities. Make lasting memories in a room that feels like home.</p>
               <p><a class="btn btn-primary text-white btnn mainBtnn pointer" onClick={() => router.push('/reservations')}>Book Now</a></p>
@@ -78,9 +78,9 @@ const Rooms = () => {
           </div>
           
           <div class="site-block-half d-block d-lg-flex bg-white" data-aos="fade" data-aos-delay="200">
-            <a href="#" class="image d-block bg-image-2 order-2" style={{ backgroundImage: 'url(images/room7.jpeg)' }}></a>
+            <a class="image d-block bg-image-2 order-2" style={{ backgroundImage: 'url(images/room7.jpeg)' }}></a>
             <div class="text order-1">
-              <span class="d-block mb-4"><span class="display-4 mainClr">$299</span> <span class="text-uppercase letter-spacing-2">/ per night</span> </span>
+              <span class="d-block mb-4"><span class="display-4 mainClr">Rs 1500</span> <span class="text-uppercase letter-spacing-2">/ per night</span> </span>
               <h2 class="mb-4">Presidential Room</h2>
               <p>Indulge in luxury and prestige in our Presidential Room. Experience opulent living with spacious accommodations, exquisite decor, and top-notch amenities. Elevate your stay with exclusive services tailored for a truly regal experience. Unwind in style and enjoy unparalleled comfort in the pinnacle of sophistication</p>
               <p><a class="btn btn-primary text-white btnn mainBtnn pointer" onClick={() => router.push('/reservations')}>Book Now</a></p>
