@@ -1,4 +1,3 @@
-import React from 'react';
 import BestPlace from '../components/bestPlace';
 import Carosusel from '../components/carosusel';
 import Footer from '../components/footer';
